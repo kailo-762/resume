@@ -1,0 +1,29 @@
+@import "../../../styles/colors";
+@import "../../../styles/typography";
+
+$image-card-height: 30vh;
+
+.ImageCard {
+  position: relative;
+  color: $color-white;
+  height: 100%;
+  overflow: hidden;
+
+  &.isWhite {
+    color: $color-black;
+  }
+
+  .contentContainer {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+  }
+
+  .absoluteContainer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../Text/Text.module";
+
+.List {
+    &.isHyphens {
+        list-style: none;
+
+        li {
+            display: flex;
+            margin-left: unset;
+
+            &:before {
+                content: "-";
+                margin-right: 1rem;
+                line-height: $text-line-height;
+            }
+        }
+    }
+
+    li {
+        margin-left: 2rem;
+    }
+}

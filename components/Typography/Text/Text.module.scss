@@ -1,0 +1,14 @@
+@import "../../../styles/typography";
+@import "../../../styles/colors";
+
+$text-line-height: 1.75rem;
+
+.Text {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  text-align: justify;
+
+  .isBlack {
+    background: $color-black;
+  }
+}

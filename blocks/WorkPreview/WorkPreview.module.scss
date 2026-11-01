@@ -1,0 +1,52 @@
+@import "../../styles/typography";
+@import "../../styles/mixins/breakpoints";
+
+.WorkPreview {
+  @include view-between("small", "large") {
+    margin-bottom: 6rem;
+  }
+
+  @include view("medium") {
+    height: 24rem;
+  }
+
+  width: 100%;
+  height: 24rem;
+  margin-bottom: 5rem;
+  //   background-color: black;
+
+  .previewContainer {
+    @include view("medium") {
+      width: 30rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include view("large") {
+      width: 22rem;
+      padding: 0;
+    }
+
+    text-align: center;
+    position: absolute;
+    padding: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .title,
+    .description {
+      margin-bottom: 2rem;
+    }
+
+    .description {
+      @include view("medium") {
+        text-align: center;
+      }
+    }
+
+    .emoji {
+      line-height: 1;
+    }
+  }
+}

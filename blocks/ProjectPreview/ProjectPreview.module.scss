@@ -1,0 +1,126 @@
+@import "../../styles/typography";
+@import "../../styles/mixins/breakpoints";
+
+$card-title-padding-tablet: 2.5rem;
+
+.ProjectPreview {
+  @include view-between("small", "large") {
+    margin-bottom: 6rem;
+  }
+
+  @include view("large") {
+    margin-bottom: 6rem;
+  }
+
+  margin-bottom: 5rem;
+
+  &:nth-of-type(even) {
+    // .cardContainer {
+    //   @include view("large") {
+    //     order: 2;
+    //   }
+    // }
+
+    .descriptionContainer {
+      @include view("large") {
+        order: 1;
+      }
+    }
+  }
+
+  .content {
+    @include view("large") {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .cardContainer {
+    @include view-between("small", "large") {
+      height: 5rem;
+    }
+
+    @include view("large") {
+      flex: 0 0 50%;
+      height: 7rem;
+    }
+
+    margin-bottom: 3rem;
+    height: 7rem;
+    text-align: center;
+
+    .cardTitle {
+      @include view-between("small", "large") {
+        padding: $card-title-padding-tablet;
+      }
+
+      @include view("large") {
+        padding: $card-title-padding-tablet / 1.5;
+      }
+
+      z-index: 2;
+      font-size: $title-level-one;
+      line-height: 1;
+      padding: 1rem;
+    }
+  }
+
+  .descriptionContainer {
+    @include view-between("small", "large") {
+      justify-content: space-between;
+      max-width: 35rem;
+      padding-left: $card-title-padding-tablet;
+      margin-top: 4.5rem;
+    }
+
+    @include view("large") {
+      flex: 0 0 40%;
+      margin-top: 0;
+      flex-wrap: wrap;
+      justify-content: unset;
+      align-items: flex-start;
+    }
+
+    @include view-above("small") {
+      display: flex;
+    }
+  }
+
+  .linksContainer {
+    @include view-between("small", "large") {
+      order: 1;
+      flex: 0 0 25%;
+      display: block;
+    }
+
+    @include view("large") {
+      flex: 0 0 100%;
+      height: auto;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    // margin-bottom: 1.25rem;
+
+    & > * {
+      margin: 0 0.75rem 1rem 0;
+    }
+  }
+
+  .contentContainer {
+    @include view-between("small", "large") {
+      order: 0;
+      flex: 0 0 60%;
+    }
+
+    .textContainer {
+      @include view-between("small", "large") {
+        margin-bottom: 2.5rem;
+      }
+
+      margin-bottom: 2rem;
+    }
+  }
+}

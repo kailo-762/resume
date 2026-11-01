@@ -1,0 +1,94 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/mixins/breakpoints";
+
+:export {
+  logoColor: $color-purple-light;
+}
+
+.Welcome {
+  @include view-between("small", "large") {
+    margin-bottom: 6rem;
+  }
+
+  @include view("large") {
+    position: relative;
+  }
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+
+  .logoContainer {
+    @include view-between("small", "large") {
+      width: 9vw;
+      margin: 0 auto 3em;
+      flex: 0 0 9vw;
+    }
+
+    @include view("large") {
+      margin: 0 5% 0 0;
+      width: 5%;
+      flex: 0 0 5%;
+      padding-top: 0.75rem;
+    }
+
+    width: 15vw;
+    margin: 0 auto 2em;
+    flex: 0 0 15vw;
+  }
+
+  .heading {
+    @include view-below("medium") {
+      font-size: $title-level-two;
+    }
+
+    @include view("large") {
+      flex: 0 0 80%;
+      line-height: 1.3;
+    }
+
+    color: $color-purple-light;
+    line-height: 1.5;
+
+    .isPink,
+    .isWhite {
+      display: inline-block;
+    }
+
+    .isPink {
+      color: $color-pink;
+    }
+
+    .isWhite {
+      color: $color-white;
+      display: inline-block;
+    }
+
+    .isMobileOnly {
+      @include view-below("medium") {
+        display: block;
+      }
+
+      display: none;
+    }
+  }
+
+  .buttonContainer {
+    // @include view('large') {
+    //     position: absolute;
+    //     bottom: -10rem;
+    //     left: 0;
+    //     z-index: 1;
+    // }
+
+    margin-top: 2rem;
+  }
+
+  .button {
+    display: inline-block;
+    margin-right: 8px;
+    max-width: fit-content;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/colors";
+@import "../../styles/mixins/breakpoints";
+
+$message-padding-vertical: 2em;
+
+.About {
+  @include view("large") {
+    height: 100vh;
+    padding: 0;
+  }
+
+  margin-bottom: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0 0 10vw;
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  .text {
+    margin-bottom: 2rem;
+  }
+
+  .profilepic {
+    margin-bottom: 64px;
+  }
+}

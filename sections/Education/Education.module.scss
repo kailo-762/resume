@@ -1,0 +1,20 @@
+@import "../../styles/mixins/breakpoints";
+
+.Education {
+  margin-bottom: 12rem;
+
+  .previewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .isHalf {
+      @include view("large") {
+        flex: 0 0 47%;
+      }
+
+      border: 1px solid white;
+      border-radius: 1rem;
+    }
+  }
+}
